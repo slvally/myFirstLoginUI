@@ -1,0 +1,297 @@
+html, body, h1, h2, h3, p, img {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, p{
+    cursor:default;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+
+
+/* Style */
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+
+/* Left Container */
+.l-container {
+    flex:4;
+    background-color: #F85C70;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.l-container .l-header {
+    color: white;
+    font-size: larger;
+    margin-left: 50px;
+}
+.l-container .illust {
+    height: 95%; width: 95%;
+    margin: 0px auto;
+}
+.l-container .illust img {
+    width: inherit;
+    transform: scale(140%);
+    /* kalau mau mengecil ke tengah height: 100%; width: 100%; */
+    margin-top: 40px;
+}
+
+/* Right Container */
+.r-container {
+    flex:5;
+    background-color: rgb(255, 255, 255);
+    height: 100hv;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+.r-container .rs-header {
+    text-align: end;
+    font-size: medium;
+    color: rgb(180, 180, 180);
+    font-weight: lighter;
+    
+    flex: 1;
+    /* background-color: rgb(104, 30, 104); */
+}
+.r-container .r-header {
+    flex: 1;
+    /* background-color: violet; */
+}
+.r-container .r-header h1 {
+    font-size: 40px;
+    margin-left: 20px;
+}
+.r-container .r-form {
+    flex: 4;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* background-color: rgb(160, 150, 160); */
+    display: flex;
+    flex-direction: column;
+}
+.r-container .r-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.r-container .r-form input{
+    max-width: 700px;
+    margin-bottom: 25px;
+    padding: 12px 15px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+}
+.r-container .r-formnest {
+    display: flex;
+    flex-direction: row;
+}
+.r-container .r-bform {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* background-color: thistle; */
+    flex: 3;
+}
+.r-container .r-bform label {
+    color: rgb(88, 88, 88);
+    font-size: medium;
+}
+.r-container .r-bform button {
+    background-color: #F85C70;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-top: 30px;
+    max-width: 730px;
+}
+.r-container .r-bform button:hover {
+    background-color: #ff415a;
+    transition: 0.5s;
+}
+.r-container .r-line {
+    flex: 1;
+}
+.r-container .r-footer {
+    flex: 3;
+    margin-left: 20px;
+    /* background-color: violet; */
+    display: flex;
+    flex-direction: column;
+}
+.r-container .r-footer button {
+    background-color: #ffffff;
+    border: 1px solid rgba(153, 153, 153,.6);
+    color: black;
+    font-weight: bold;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    max-width: 730px;
+}
+.r-container .r-footer button img {
+    width: 25px;
+}
+.r-container .r-footer button span {
+    top: 4px;
+}
+.r-container .r-footer button:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Responsive */
+
+
+/*untuk tablet*/
+@media screen and (max-width:1200px){
+
+    .main-container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Left Container */
+    .l-container {
+        flex: 3;
+        display: flex;
+        
+    }
+    .l-container .l-header {
+        order: 2;
+        flex: 7;
+    }
+    .l-container .illust {
+        order: 1;
+        flex: 1;
+        height: 0px;
+    }
+    .l-container .illust img {
+        width: 300px;
+        margin-top: -40px;
+        margin-left: 20px;
+        transform: scale(100%);
+    }
+
+    /* Right Container */
+    .r-container {
+        flex: 24;
+    }
+    .r-container .rs-header {
+        margin-top: -20px;
+        font-size: small;
+        flex: 1;
+    }
+    .r-container .r-header h1 {
+        font-size: 35px;
+    }
+    .r-container .r-form {
+        flex: 5;
+    }
+    .r-container .r-bform {
+        flex: 3;
+    }
+    .r-container .r-form label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .r-container .r-form input{
+        max-width: 700px;
+        margin-bottom: 15px;
+        padding: 8px 15px;
+    }
+    .r-container .r-bform {
+        margin-top: 15px;
+    }
+    .r-container .r-bform button {
+        padding: 15px 32px;
+    }
+    .r-container .r-footer {
+        flex: 3;
+    }
+    .r-container .r-footer button {
+        padding: 8px 32px;
+        margin-bottom: 15px;
+        font-size: smaller;
+    }
+    
+}
+
+/*untuk android*/
+@media screen and (max-width:700px){
+    
+    .main-container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Left Container */
+    .l-container {
+        flex: 1;
+        order: 2;
+        height: 0;
+    }
+    .l-container .l-header {
+        margin-left: 20px;
+    }
+    .l-container .illust {
+        display: none;
+    }
+    
+
+    /* Right Container */
+    .r-container {
+        flex: 9;
+        order: 1;
+    }
+    .r-container .r-header h1 {
+        margin-top: 25px;
+    }
+    .r-container .r-formnest {
+        display: flex;
+        flex-direction: column;
+    }
+    .r-container .r-bform {
+        margin-top: 10px;
+    }
+    .r-container .r-line {
+        margin-top: 20px;
+    }
+    .r-container .r-footer button:nth-child(1) {
+        margin-top: 20px;
+    }
+    
+
+}
